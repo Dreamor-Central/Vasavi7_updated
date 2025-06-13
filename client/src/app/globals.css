@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --teal: #2DD4BF;
+    --purple: #A855F7;
+    --gray-dark: #1F2937;
+    --gray-darker: #111827;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-gray-950 to-purple-900 text-gray-100 font-inter;
+  }
+}
+
+@layer utilities {
+  .prose {
+    @apply max-w-none;
+  }
+
+  .prose pre {
+    @apply bg-gray-900 rounded-lg p-4 text-sm font-mono text-purple-300;
+  }
+
+  .prose code {
+    @apply text-purple-300 bg-gray-800/50 rounded px-1;
+  }
+
+  .prose a {
+    @apply text-teal-400 hover:underline hover:text-teal-300 transition-colors duration-200;
+  }
+
+  .prose ul, .prose ol {
+    @apply pl-6 my-2;
+  }
+
+  .prose li {
+    @apply my-1;
+  }
+
+  .prose blockquote {
+    @apply border-l-4 border-teal-400 pl-4 italic text-gray-300;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
