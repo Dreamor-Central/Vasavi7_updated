@@ -16,6 +16,9 @@ import os
 import re
 import uuid
 import uvicorn
+import mysql.connector
+from mysql.connector import Error
+from datetime import datetime
 from dotenv import load_dotenv
 from langchain_openai import ChatOpenAI
 from langchain_community.tools.tavily_search import TavilySearchResults
@@ -25,13 +28,12 @@ from styling import StylingAgent
 from difflib import SequenceMatcher
 
 # === Logging Configuration ===
-# === Logging Configuration ===
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[logging.FileHandler("supervisor.log"), logging.StreamHandler()]
 )
-logger = logging.getLogger(__name__)  
+logger = logging.getLogger(__name__)
 
 # === Load environment variables ===
 load_dotenv()
@@ -39,7 +41,43 @@ required_env_vars = ["TAVILY_API_KEY", "OPENAI_API_KEY", "PINECONE_API_KEY"]
 for var in required_env_vars:
     if not os.getenv(var):
         logger.error(f"Environment variable '{var}' is missing.")
-        raise ValueError(f"Environment variable '{var}' is required.")
+        raise ValueValueError(f"Environment variable '{var}' is required.")
+
+# === Database Configuration ===
+def get_db_connection():
+    try:
+        connection = mysql.connector.connect(
+            host="localhost",
+            database="chat_history",
+            user="root",
+            password="mysecretpassword"
+        )
+        if connection.is_connected():
+            logger.info("Successfully connected to the MySQL database")
+            return connection
+    except Error as e:
+        logger.error(f"Error connecting to MySQL database: {e}")
+        return None
+
+def store_chat_log(connection, session_id, user_message, response, intent, products=None, categories=None, sentiment=0.5, keywords=None):
+    try:
+        cursor = connection.cursor()
+        query = """
+        INSERT INTO chat_log (timestamp, session_id, user_message, response, intent, products, categories, sentiment, keywords, returns_count, exchanges_count)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        """
+        timestamp = datetime.now()
+        response_json = json.dumps(response) if isinstance(response, dict) else response
+        cursor.execute(query, (
+            timestamp, session_id, user_message, response_json, intent,
+            products, categories, sentiment, keywords, 0, 0
+        ))
+        connection.commit()
+        logger.info(f"Stored chat log for session_id: {session_id}, intent: {intent}")
+    except Error as e:
+        logger.error(f"Error storing chat log: {e}")
+    finally:
+        cursor.close()
 
 # === Initialize memory saver for checkpointing ===
 memory = MemorySaver()
@@ -397,6 +435,17 @@ async def supervisor_agent(state: State) -> State:
         logger.info(f"Decision: Intent={intent}, Tool={tool}, Confidence={confidence:.2f}, Reasoning={reasoning}")
         state["intent"] = intent
 
+        # Extract products and categories for chat_log
+        products = None
+        categories = None
+        if intent == "recommendation":
+            recommendations = state.get("context", {}).get("recent_recommendations", [])
+            if recommendations:
+                products = ", ".join([item.get("style_name", "") for item in recommendations])
+                categories = ", ".join([item.get("category", "") for item in recommendations])
+
+        keywords_str = ", ".join(matched_keywords) if matched_keywords else None
+
         tool_result = None
         if tool:
             if tool == "styling_agent_tool":
@@ -407,6 +456,8 @@ async def supervisor_agent(state: State) -> State:
                 if tool_result and tool_result["intent"] == "recommendation" and tool_result["metadata"].get("recommendations"):
                     state["context"] = state.get("context", {})
                     state["context"]["recent_recommendations"] = tool_result["metadata"]["recommendations"]
+                    products = ", ".join([item.get("style_name", "") for item in tool_result["metadata"]["recommendations"]])
+                    categories = tool_result["metadata"].get("category")
             elif tool == "trend_agent_tool":
                 tool_result = await trend_agent_tool.ainvoke({"query": query})
             elif tool == "sales_agent_tool":
@@ -424,6 +475,23 @@ async def supervisor_agent(state: State) -> State:
             if isinstance(output_content, dict):
                 output_content = json.dumps(output_content, indent=2)
             state["messages"].append(AIMessage(content=output_content))
+            # Store in chat_log
+            connection = get_db_connection()
+            if connection:
+                try:
+                    store_chat_log(
+                        connection=connection,
+                        session_id=state["session_id"],
+                        user_message=query,
+                        response=tool_result,
+                        intent=intent,
+                        products=products,
+                        categories=categories,
+                        sentiment=0.5,  # Default, as sentiment analysis not implemented
+                        keywords=keywords_str
+                    )
+                finally:
+                    connection.close()
         else:
             logger.warning("Tool returned no result.")
             state["agent_output"] = {
@@ -432,6 +500,23 @@ async def supervisor_agent(state: State) -> State:
                 "confidence": 0.1
             }
             state["messages"].append(AIMessage(content=state["agent_output"]["output"]))
+            # Store in chat_log
+            connection = get_db_connection()
+            if connection:
+                try:
+                    store_chat_log(
+                        connection=connection,
+                        session_id=state["session_id"],
+                        user_message=query,
+                        response=state["agent_output"],
+                        intent="error",
+                        products=None,
+                        categories=None,
+                        sentiment=0.5,
+                        keywords=keywords_str
+                    )
+                finally:
+                    connection.close()
 
         return state
     except Exception as e:
@@ -443,6 +528,23 @@ async def supervisor_agent(state: State) -> State:
             "confidence": 0.1
         }
         state["messages"].append(AIMessage(content=state["agent_output"]["output"]))
+        # Store in chat_log
+        connection = get_db_connection()
+        if connection:
+            try:
+                store_chat_log(
+                    connection=connection,
+                    session_id=state["session_id"],
+                    user_message=query,
+                    response=state["agent_output"],
+                    intent="error",
+                    products=None,
+                    categories=None,
+                    sentiment=0.5,
+                    keywords=None
+                )
+            finally:
+                connection.close()
         return state
 
 async def tool_node(state: State) -> State:
@@ -454,6 +556,23 @@ async def tool_node(state: State) -> State:
             state["intent"] = "error"
             state["agent_output"] = {"output": "System error: Invalid message format.", "intent": "error", "confidence": 0.1}
             state["messages"].append(AIMessage(content=state["agent_output"]["output"]))
+            # Store in chat_log
+            connection = get_db_connection()
+            if connection:
+                try:
+                    store_chat_log(
+                        connection=connection,
+                        session_id=state["session_id"],
+                        user_message=state["messages"][-2].content if len(state["messages"]) > 1 else "Unknown",
+                        response=state["agent_output"],
+                        intent="error",
+                        products=None,
+                        categories=None,
+                        sentiment=0.5,
+                        keywords=None
+                    )
+                finally:
+                    connection.close()
             return state
 
         tool_call = last_message.tool_calls[0] if last_message.tool_calls else None
@@ -468,6 +587,11 @@ async def tool_node(state: State) -> State:
         logger.info(f"Executing tool: {tool_name} with args: {tool_args}")
 
         result = None
+        products = None
+        categories = None
+        keywords = ", ".join([word for word in re.findall(r'\w+', tool_args.get("query", "").lower()) if fuzzy_match(word, 
+            ["style", "jacket", "jeans", "trend", "shipping", "returns", "hi", "bye"], 0.8)])
+
         if tool_name == "sales_agent_tool":
             result = await sales_agent_tool.ainvoke(tool_args)
         elif tool_name == "recommendation_agent_tool":
@@ -475,6 +599,8 @@ async def tool_node(state: State) -> State:
             if result and result.get("metadata", {}).get("recommendations"):
                 state["context"] = state.get("context", {})
                 state["context"]["recent_recommendations"] = result["metadata"]["recommendations"]
+                products = ", ".join([item.get("style_name", "") for item in result["metadata"]["recommendations"]])
+                categories = result["metadata"].get("category")
         elif tool_name == "styling_agent_tool":
             tool_args_for_styling = tool_args.copy()
             if "recommendations" not in tool_args_for_styling and state.get("context", {}).get("recent_recommendations"):
@@ -496,11 +622,45 @@ async def tool_node(state: State) -> State:
                 tool_call_id=tool_id,
                 name=tool_name
             ))
+            # Store tool message in chat_log
+            connection = get_db_connection()
+            if connection:
+                try:
+                    store_chat_log(
+                        connection=connection,
+                        session_id=state["session_id"],
+                        user_message=tool_args.get("query", "Unknown"),
+                        response=result,
+                        intent=result.get("intent", state["intent"]),
+                        products=products,
+                        categories=categories,
+                        sentiment=0.5,
+                        keywords=keywords
+                    )
+                finally:
+                    connection.close()
             state["intent"] = result.get("intent", state["intent"])
         else:
             logger.error(f"Tool '{tool_name}' failed silently.")
             state["agent_output"] = {"output": f"Tool '{tool_name}' failed. Please try again!", "intent": "error", "confidence": 0.1}
             state["messages"].append(AIMessage(content=state["agent_output"]["output"]))
+            # Store error AI message in chat_log
+            connection = get_db_connection()
+            if connection:
+                try:
+                    store_chat_log(
+                        connection=connection,
+                        session_id=state["session_id"],
+                        user_message=tool_args.get("query", "Unknown"),
+                        response=state["agent_output"],
+                        intent="error",
+                        products=None,
+                        categories=None,
+                        sentiment=0.5,
+                        keywords=keywords
+                    )
+                finally:
+                    connection.close()
             state["intent"] = "error"
 
         return state
@@ -509,6 +669,23 @@ async def tool_node(state: State) -> State:
         state["intent"] = "error"
         state["agent_output"] = {"output": "An error occurred while processing your request. Please try again! 🌟", "intent": "error", "confidence": 0.1}
         state["messages"].append(AIMessage(content=state["agent_output"]["output"]))
+        # Store error AI message in chat_log
+        connection = get_db_connection()
+        if connection:
+            try:
+                store_chat_log(
+                    connection=connection,
+                    session_id=state["session_id"],
+                    user_message=state["messages"][-2].content if len(state["messages"]) > 1 else "Unknown",
+                    response=state["agent_output"],
+                    intent="error",
+                    products=None,
+                    categories=None,
+                    sentiment=0.5,
+                    keywords=None
+                )
+            finally:
+                connection.close()
         return state
 
 async def response_node(state: State) -> State:
@@ -525,12 +702,55 @@ async def response_node(state: State) -> State:
         final_response = response if intent != "error" else "Sorry, something went wrong. Try again or contact Support@vasavi.co! 🌟"
 
         state["messages"].append(AIMessage(content=final_response))
+        # Store AI message in chat_log
+        connection = get_db_connection()
+        if connection:
+            try:
+                query = state["messages"][-2].content if len(state["messages"]) > 1 else "Unknown"
+                products = None
+                categories = None
+                if intent == "recommendation" and agent_output.get("metadata", {}).get("recommendations"):
+                    products = ", ".join([item.get("style_name", "") for item in agent_output["metadata"]["recommendations"]])
+                    categories = agent_output["metadata"].get("category")
+                keywords = ", ".join([word for word in re.findall(r'\w+', query.lower()) if fuzzy_match(word, 
+                    ["style", "jacket", "jeans", "trend", "shipping", "returns", "hi", "bye"], 0.8)])
+                store_chat_log(
+                    connection=connection,
+                    session_id=state["session_id"],
+                    user_message=query,
+                    response=agent_output,
+                    intent=intent,
+                    products=products,
+                    categories=categories,
+                    sentiment=0.5,
+                    keywords=keywords
+                )
+            finally:
+                connection.close()
         state["agent_output"] = None
         return state
     except Exception as e:
         logger.error(f"Response node error: {str(e)}", exc_info=True)
         state["intent"] = "error"
         state["messages"].append(AIMessage(content="An error occurred while preparing my response. Please try again! 🌟"))
+        # Store error AI message in chat_log
+        connection = get_db_connection()
+        if connection:
+            try:
+                query = state["messages"][-2].content if len(state["messages"]) > 1 else "Unknown"
+                store_chat_log(
+                    connection=connection,
+                    session_id=state["session_id"],
+                    user_message=query,
+                    response={"output": "An error occurred while preparing my response. Please try again! 🌟", "intent": "error", "confidence": 0.1},
+                    intent="error",
+                    products=None,
+                    categories=None,
+                    sentiment=0.5,
+                    keywords=None
+                )
+            finally:
+                connection.close()
         state["agent_output"] = None
         return state
 
@@ -614,6 +834,24 @@ async def generate_chat_response(message: str, checkpoint_id: Optional[str] = No
                 yield f"data: {json.dumps({'type': 'error', 'content': 'Invalid checkpoint ID format.'})}\n\n"
                 return
 
+        # Store initial user message in chat_log
+        connection = get_db_connection()
+        if connection:
+            try:
+                store_chat_log(
+                    connection=connection,
+                    session_id=current_thread_id,
+                    user_message=message,
+                    response={"output": "Processing query..."},
+                    intent="pending",
+                    products=None,
+                    categories=None,
+                    sentiment=0.5,
+                    keywords=None
+                )
+            finally:
+                connection.close()
+
         config = {"configurable": {"thread_id": current_thread_id}}
         if not checkpoint_id:
             yield f"data: {json.dumps({'type': 'checkpoint', 'checkpoint_id': current_thread_id})}\n\n"
@@ -679,26 +917,91 @@ async def chat_stream(
 
 # === Test Script ===
 if __name__ == "__main__":
-    # async def test_queries():
-    #     test_queries = [
-    #         "suggest some jackets",
-    #         "recomend tshirt",
-    #         "SHOW ME JEANS",
-    #         "hii how r u",
-    #         "can I return a shirt",
-    #         "how to style a hoodie",
-    #         "accessories for jeans",
-    #         "whats trending in streetwear",
-    #         "latest fashion 2025",
-    #         "about vasavi",
-    #         "sugest JAKETS"
-    #     ]
-    #     for query in test_queries:
-    #         logger.info(f"Testing query: {query}")
-    #         async for chunk in generate_chat_response(query):
-    #             print(chunk)
-    #         print("-" * 80)
-
-    # logger.info("Starting Vasavi AI Salesman API...")
-    # asyncio.run(test_queries())
     uvicorn.run(app, host="0.0.0.0", port=8001, log_level="info")
+```
+
+### Setup Instructions
+1. **Replace MySQL Credentials**:
+   - In `get_db_connection`, update `host`, `database`, `user`, and `password` with your actual MySQL credentials:
+     ```python
+     host="your_mysql_host",  # e.g., "localhost" or "mysql.example.com"
+     database="chat_history",
+     user="your_username",    # e.g., "root"
+     password="your_password" # e.g., "mysecretpassword"
+     ```
+
+2. **Create Database and Table**:
+   Run the following SQL to set up the `chat_history` database and `chat_log` table (already provided by you):
+   ```sql
+   CREATE DATABASE IF NOT EXISTS chat_history;
+   USE chat_history;
+   CREATE TABLE chat_log (
+       id INT AUTO_INCREMENT PRIMARY KEY,
+       timestamp DATETIME NOT NULL,
+       session_id VARCHAR(36) NOT NULL,
+       user_message TEXT NOT NULL,
+       response JSON NOT NULL,
+       intent VARCHAR(50),
+       products VARCHAR(255),
+       categories VARCHAR(255),
+       sentiment FLOAT,
+       keywords VARCHAR(255),
+       returns_count INT DEFAULT 0,
+       exchanges_count INT DEFAULT 0,
+       INDEX idx_session_id (session_id),
+       INDEX idx_intent (intent)
+   );
+   ```
+
+3. **Environment Variables**:
+   Ensure you have a `.env` file with the required non-MySQL variables:
+   ```
+   TAVILY_API_KEY=your_tavily_api_key
+   OPENAI_API_KEY=your_openai_api_key
+   PINECONE_API_KEY=your_pinecone_api_key
+   ```
+
+4. **Dependencies**:
+   Install required Python packages:
+   ```bash
+   pip install fastapi uvicorn mysql-connector-python langchain langchain-openai langchain-community python-dotenv
+   ```
+   Ensure `sales.py`, `semanticrag.py`, and `styling.py` are available and correctly implemented.
+
+5. **Run the Application**:
+   Save the code as `main.py` and run:
+   ```bash
+   python main.py
+   ```
+   The FastAPI server will start at `http://0.0.0.0:8001`. Test the `/chat/stream` endpoint:
+   ```bash
+   curl -X POST "http://localhost:8001/chat/stream?message=Show%20me%20some%20jackets"
+   ```
+
+6. **Test Database Connection**:
+   Verify the connection with this standalone script:
+   ```python
+   import mysql.connector
+   from mysql.connector import Error
+
+   def test_db_connection():
+       try:
+           connection = mysql.connector.connect(
+               host="localhost",
+               database="chat_history",
+               user="root",
+               password="mysecretpassword"
+           )
+           if connection.is_connected():
+               print("Connection successful!")
+               cursor = connection.cursor()
+               cursor.execute("SELECT DATABASE();")
+               db_name = cursor.fetchone()[0]
+               print(f"Connected to database: {db_name}")
+               cursor.close()
+               connection.close()
+       except Error as e:
+           print(f"Error: {e}")
+
+   if __name__ == "__main__":
+       test_db_connection()

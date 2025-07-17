@@ -10,8 +10,20 @@
     --gray-darker: #111827;
   }
 
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html,
   body {
-    @apply bg-gradient-to-br from-gray-950 to-purple-900 text-gray-100 font-inter;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-gradient-to-br from-gray-950 to-purple-900 text-gray-100 font-inter min-h-screen;
   }
 }
 

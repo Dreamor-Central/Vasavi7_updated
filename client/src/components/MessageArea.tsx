@@ -1,5 +1,30 @@
 import React from 'react';
 
+interface SearchInfo {
+    stages: string[];
+    query?: string;
+    urls?: string[] | string;
+    error?: string | object;
+}
+
+interface Message {
+    id: number;
+    content: string | object;
+    isUser: boolean;
+    type: string;
+    isLoading?: boolean;
+    agent?: string;
+    searchInfo?: SearchInfo;
+}
+
+interface SearchStagesProps {
+    searchInfo: SearchInfo;
+}
+
+interface MessageAreaProps {
+    messages: Message[];
+}
+
 const PremiumTypingAnimation = () => {
     return (
         <div className="flex items-center space-x-2">
@@ -17,7 +42,7 @@ const PremiumTypingAnimation = () => {
     );
 };
 
-const SearchStages = ({ searchInfo }) => {
+const SearchStages = ({ searchInfo }: SearchStagesProps) => {
     if (!searchInfo || !searchInfo.stages || searchInfo.stages.length === 0) return null;
 
     return (
@@ -64,7 +89,11 @@ const SearchStages = ({ searchInfo }) => {
                                             ))
                                         ) : (
                                             <div className="bg-gray-800 text-xs px-4 py-2 rounded-lg border border-gray-700 truncate max-w-[250px] hover:bg-gray-700 transition-all duration-200 shadow-[0_0_5px_rgba(45,212,191,0.3)] text-gray-300">
-                                                {typeof searchInfo.urls === 'string' ? searchInfo.urls.substring(0, 40) : JSON.stringify(searchInfo.urls).substring(0, 40)}
+                                                {searchInfo.urls 
+                                                    ? (typeof searchInfo.urls === 'string' 
+                                                        ? searchInfo.urls.substring(0, 40) 
+                                                        : JSON.stringify(searchInfo.urls).substring(0, 40))
+                                                    : "No URLs"}
                                             </div>
                                         )}
                                     </div>
@@ -84,7 +113,11 @@ const SearchStages = ({ searchInfo }) => {
                         <div className="absolute -left-4 top-2 w-3 h-3 bg-red-500 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.8)]"></div>
                         <span className="font-semibold text-red-400 ml-3">Search error</span>
                         <div className="pl-5 text-xs text-red-400 mt-1.5">
-                            {searchInfo.error || "An error occurred during search."}
+                            {searchInfo.error 
+                                ? (typeof searchInfo.error === 'string' 
+                                    ? searchInfo.error 
+                                    : JSON.stringify(searchInfo.error)) 
+                                : "An error occurred during search."}
                         </div>
                     </div>
                 )}
@@ -93,7 +126,7 @@ const SearchStages = ({ searchInfo }) => {
     );
 };
 
-const MessageArea = ({ messages }) => {
+const MessageArea = ({ messages }: MessageAreaProps) => {
     return (
         <div className="flex-grow overflow-y-auto bg-gradient-to-b from-gray-900 to-gray-800" style={{ minHeight: 0 }}>
             <div className="max-w-4xl mx-auto p-6 space-y-6">
@@ -113,7 +146,11 @@ const MessageArea = ({ messages }) => {
                                     <PremiumTypingAnimation />
                                 ) : (
                                     <p className="text-sm leading-relaxed">
-                                        {message.content || (
+                                        {message.content ? (
+                                            typeof message.content === 'string' 
+                                                ? message.content 
+                                                : JSON.stringify(message.content)
+                                        ) : (
                                             <span className="text-gray-500 text-xs italic">Waiting for response...</span>
                                         )}
                                     </p>

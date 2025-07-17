@@ -17,7 +17,7 @@ interface Message {
     stages: string[];
     query?: string;
     urls?: string[];
-    error?: string;
+    error?: string | object;
   };
 }
 
@@ -69,7 +69,7 @@ const Home = () => {
         ]);
 
         // Use confirmed EC2 endpoint
-        let url = `http://54.237.107.51:8000/chat/stream?message=${encodeURIComponent(userInput)}`;
+        let url = `http://localhost:8001/chat/stream?message=${encodeURIComponent(userInput)}`;
         if (checkpointId) {
           url += `&checkpoint_id=${encodeURIComponent(checkpointId)}`;
         }
@@ -182,7 +182,7 @@ const Home = () => {
                   setMessages(prev =>
                     prev.map(msg =>
                       msg.id === aiResponseId
-                        ? { ...msg, content: eventData.content || "An error occurred during streaming.", isLoading: false, agent: currentAgent, searchInfo: { ...currentSearchInfo, stages: ['error'], error: eventData.content || "Unknown error" } }
+                        ? { ...msg, content: eventData.content || "An error occurred during streaming.", isLoading: false, agent: currentAgent, searchInfo: { ...currentSearchInfo, stages: ['error'], error: typeof eventData.content === 'string' ? eventData.content : JSON.stringify(eventData.content) || "Unknown error" } }
                         : msg
                     )
                   );
@@ -220,7 +220,7 @@ const Home = () => {
         setMessages(prev => [
           ...prev,
           {
-            id: aiResponseId,
+            id: prev.length > 0 ? Math.max(...prev.map(msg => msg.id)) + 1 : 1,
             content: `Sorry, there was an error processing your request: ${error instanceof Error ? error.message : String(error)}`,
             isUser: false,
             type: 'message',

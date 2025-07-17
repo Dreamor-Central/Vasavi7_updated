@@ -1,0 +1,305 @@
+2025-07-17 16:35:30,207 - VasaviRAG - ERROR - Missing required environment variables: OPENAI_API_KEY or PINECONE_API_KEY
+2025-07-17 16:37:29,652 - filelock - DEBUG - Attempting to acquire lock 1359340549200 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ff248a5f7d76e27b10778b3c593c9fba1df4c448.lock
+2025-07-17 16:37:29,653 - filelock - DEBUG - Lock 1359340549200 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ff248a5f7d76e27b10778b3c593c9fba1df4c448.lock
+2025-07-17 16:37:29,658 - filelock - DEBUG - Attempting to release lock 1359340549200 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ff248a5f7d76e27b10778b3c593c9fba1df4c448.lock
+2025-07-17 16:37:29,658 - filelock - DEBUG - Lock 1359340549200 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ff248a5f7d76e27b10778b3c593c9fba1df4c448.lock
+2025-07-17 16:37:30,105 - filelock - DEBUG - Attempting to acquire lock 1359245693776 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd.lock
+2025-07-17 16:37:30,105 - filelock - DEBUG - Lock 1359245693776 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd.lock
+2025-07-17 16:37:40,986 - filelock - DEBUG - Attempting to release lock 1359245693776 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd.lock
+2025-07-17 16:37:40,986 - filelock - DEBUG - Lock 1359245693776 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\ced967c45fd1902eb92716c9ceeca7c95a936770ea9db611f5a841b926e33fbd.lock
+2025-07-17 16:37:41,255 - filelock - DEBUG - Attempting to acquire lock 1359244845648 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\059214673d9d6d2ee319411e2ffec8c024b816d5.lock
+2025-07-17 16:37:41,255 - filelock - DEBUG - Lock 1359244845648 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\059214673d9d6d2ee319411e2ffec8c024b816d5.lock
+2025-07-17 16:37:41,265 - filelock - DEBUG - Attempting to release lock 1359244845648 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\059214673d9d6d2ee319411e2ffec8c024b816d5.lock
+2025-07-17 16:37:41,266 - filelock - DEBUG - Lock 1359244845648 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\059214673d9d6d2ee319411e2ffec8c024b816d5.lock
+2025-07-17 16:37:41,755 - filelock - DEBUG - Attempting to acquire lock 1359245735632 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-07-17 16:37:41,757 - filelock - DEBUG - Lock 1359245735632 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-07-17 16:37:41,811 - filelock - DEBUG - Attempting to release lock 1359245735632 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-07-17 16:37:41,811 - filelock - DEBUG - Lock 1359245735632 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\cfc8146abe2a0488e9e2a0c56de7952f7c11ab059eca145a0a727afce0db2865.lock
+2025-07-17 16:37:42,033 - filelock - DEBUG - Attempting to acquire lock 1357209737488 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e.lock
+2025-07-17 16:37:42,033 - filelock - DEBUG - Lock 1357209737488 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e.lock
+2025-07-17 16:37:42,202 - filelock - DEBUG - Attempting to release lock 1357209737488 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e.lock
+2025-07-17 16:37:42,202 - filelock - DEBUG - Lock 1357209737488 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\9eb652ac4e40cc093272bbbe0f55d521cf67570060227109b5cdc20945a4489e.lock
+2025-07-17 16:37:42,693 - filelock - DEBUG - Attempting to acquire lock 1357209968912 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\68171d1ff68b731a33d119708476692c094a466b.lock
+2025-07-17 16:37:42,693 - filelock - DEBUG - Lock 1357209968912 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\68171d1ff68b731a33d119708476692c094a466b.lock
+2025-07-17 16:37:42,707 - filelock - DEBUG - Attempting to release lock 1357209968912 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\68171d1ff68b731a33d119708476692c094a466b.lock
+2025-07-17 16:37:42,707 - filelock - DEBUG - Lock 1357209968912 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\68171d1ff68b731a33d119708476692c094a466b.lock
+2025-07-17 16:37:43,971 - filelock - DEBUG - Attempting to acquire lock 1359340548496 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\0b2caedc18bbbcf3270effb2e13f7ff06cdb8b16.lock
+2025-07-17 16:37:43,971 - filelock - DEBUG - Lock 1359340548496 acquired on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\0b2caedc18bbbcf3270effb2e13f7ff06cdb8b16.lock
+2025-07-17 16:37:43,989 - filelock - DEBUG - Attempting to release lock 1359340548496 on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\0b2caedc18bbbcf3270effb2e13f7ff06cdb8b16.lock
+2025-07-17 16:37:43,989 - filelock - DEBUG - Lock 1359340548496 released on C:\Users\24108B0007\.cache\huggingface\hub\.locks\models--BAAI--bge-reranker-base\0b2caedc18bbbcf3270effb2e13f7ff06cdb8b16.lock
+2025-07-17 16:37:43,999 - sentence_transformers.cross_encoder.CrossEncoder - INFO - Use pytorch device: cpu
+2025-07-17 16:37:44,756 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-07-17 16:47:50,401 - __main__ - INFO - Chat request: message='hi', checkpoint_id='None'
+2025-07-17 16:47:50,415 - __main__ - INFO - New session: 7eb79788-82b6-41f9-b9da-8f37a100024d
+2025-07-17 16:47:50,423 - __main__ - DEBUG - Normalized query: 'hi', Words: ['hi']
+2025-07-17 16:47:50,425 - __main__ - DEBUG - Input: Query='hi', Normalized='hi', History='', Context='{}'
+2025-07-17 16:47:50,425 - __main__ - WARNING - Prompt error on attempt 1: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 16:47:50,425 - __main__ - WARNING - Prompt error on attempt 2: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 16:47:50,425 - __main__ - WARNING - Prompt error on attempt 3: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 16:47:50,425 - __main__ - ERROR - Failed to process prompt after 3 attempts. Using keyword-based intent: greeting
+2025-07-17 16:47:50,426 - __main__ - INFO - Decision: Intent=greeting, Tool=sales_agent_tool, Confidence=1.00, Reasoning=Prompt failed after 3 attempts: '\n  "intent"'. Used keyword-based intent: greeting
+2025-07-17 16:47:50,426 - __main__ - INFO - Tool started: sales_agent_tool
+2025-07-17 16:47:54,562 - sales - INFO - Successfully connected to Pinecone index: salesman-index
+2025-07-17 16:47:54,734 - sales - INFO - OpenAI client initialized successfully
+2025-07-17 16:47:54,734 - sales - DEBUG - Intent detection: greeting, Score: 0.5
+2025-07-17 16:47:54,734 - sales - DEBUG - Query context: {'query': 'hi', 'timestamp': '2025-07-17 16:47:54', 'cleaned_query': 'hi', 'keywords': [], 'intent': 'greeting', 'confidence': 0.5, 'history_context': ''}
+2025-07-17 16:47:54,734 - __main__ - INFO - Tool ended: sales_agent_tool
+2025-07-17 16:47:54,734 - __main__ - DEBUG - Router intent: greeting
+2025-07-17 16:47:54,734 - __main__ - DEBUG - Routing to END: intent=greeting
+2025-07-17 16:47:54,734 - __main__ - DEBUG - Chain ended for event: router
+2025-07-17 16:47:54,745 - __main__ - DEBUG - Chain ended for event: supervisor
+2025-07-17 16:47:54,756 - __main__ - DEBUG - Chain ended for event: LangGraph
+2025-07-17 16:47:54,756 - __main__ - INFO - Streaming completed for session: 7eb79788-82b6-41f9-b9da-8f37a100024d
+2025-07-17 17:03:44,884 - __main__ - INFO - Chat request: message='I wanna buy a shirt', checkpoint_id='None'
+2025-07-17 17:03:44,884 - __main__ - INFO - New session: 99b4ea4b-eebd-4543-a3da-4aa49a1343f1
+2025-07-17 17:03:44,884 - __main__ - DEBUG - Normalized query: 'i wanna buy a shirt', Words: ['i', 'wanna', 'buy', 'a', 'shirt']
+2025-07-17 17:03:44,892 - __main__ - DEBUG - Input: Query='I wanna buy a shirt', Normalized='i wanna buy a shirt', History='', Context='{}'
+2025-07-17 17:03:44,892 - __main__ - WARNING - Prompt error on attempt 1: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:03:44,893 - __main__ - WARNING - Prompt error on attempt 2: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:03:44,893 - __main__ - WARNING - Prompt error on attempt 3: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:03:44,893 - __main__ - ERROR - Failed to process prompt after 3 attempts. Using keyword-based intent: recommendation
+2025-07-17 17:03:44,893 - __main__ - INFO - Decision: Intent=recommendation, Tool=recommendation_agent_tool, Confidence=0.90, Reasoning=Prompt failed after 3 attempts: '\n  "intent"'. Used keyword-based intent: recommendation
+2025-07-17 17:03:44,893 - __main__ - INFO - Tool started: recommendation_agent_tool
+2025-07-17 17:03:44,893 - __main__ - DEBUG - Recommendation query: 'I wanna buy a shirt', Detected category: Shirt
+2025-07-17 17:03:44,893 - VasaviRAG - INFO - Starting RAG process for query: 'I wanna buy a shirt', Category: Shirt
+2025-07-17 17:03:44,893 - VasaviRAG - INFO - Extracted filters: {'category': 'Shirt'}
+2025-07-17 17:03:44,893 - VasaviRAG - INFO - Final filters: {'category': 'Shirt'}
+2025-07-17 17:03:44,901 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-cafbb74a-b530-4a8d-8168-0dd011ea7e1f', 'json_data': {'messages': [{'role': 'system', 'content': "You are a fashion search expert. Rewrite the query to be short and semantically rich, including standard category, material, and price if mentioned. Emphasize 'denim' for 'jeans' queries. Prioritize keywords: shirts, tshirts, jackets, clothes, bottoms, corset, bodysuit, jeans. For general queries like 'clothes' or 'recommendation', use broad terms like 'vasavi clothing, new arrivals, fashion items'. Examples: 'Show me jeans under 3000' -> 'denim jeans, blue pants, under 3000';'Show me jackets' -> 'jacket, outerwear, vasavi jackets';'Recommend shirts' -> 'shirt, casual shirt, vasavi shirts';'Tshirts under 2000' -> 't-shirt, casual t-shirt, under 2000';'Clothes' -> 'vasavi clothing, new arrivals, fashion items';'A black item' -> 'black clothing, dark apparel, black fashion';"}, {'role': 'user', 'content': 'Rewrite this query: I wanna buy a shirt'}], 'model': 'gpt-4o-mini', 'temperature': 0.3}}
+2025-07-17 17:03:44,901 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-07-17 17:03:44,901 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-07-17 17:03:44,915 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000013C00194910>
+2025-07-17 17:03:44,915 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000013C7EDBCEF0> server_hostname='api.openai.com' timeout=5.0
+2025-07-17 17:03:45,012 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000013C000325D0>
+2025-07-17 17:03:45,013 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-17 17:03:45,013 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-17 17:03:45,013 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-17 17:03:45,013 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-17 17:03:45,013 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-17 17:03:46,027 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 11:33:46 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'394'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'398'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199791'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'62ms'), (b'x-request-id', b'req_6680247d36209e264be70bafa53588aa'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Xe9giSuY8ATMP6ad8U_MQGWkeAAWhMb2g1Nr8ppdWxs-1752752026-1.0.1.1-RTRWIgw1iRimy3WgZD0WpYwTGWk9fL1jdI1Dkr9x67YUF5agRMMUAvBDYmJvQRmkzy2OBTxkIxxTm_CAlaytDe1EhfgPAsWoMpHcJ.3jm18; path=/; expires=Thu, 17-Jul-25 12:03:46 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=CJ01XyGYIZtQUKt7GDw0EY1eXLA3jIxRaX3nKAjt2KQ-1752752026010-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96096d1c4801837d-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-17 17:03:46,027 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:03:46,027 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-17 17:03:46,027 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-17 17:03:46,027 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-17 17:03:46,027 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-17 17:03:46,027 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 17 Jul 2025 11:33:46 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'viv-2ysxog'), ('openai-processing-ms', '394'), ('openai-project', 'proj_lxf5EOiEBYmtUFE0a37znKxu'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '398'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199791'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '62ms'), ('x-request-id', 'req_6680247d36209e264be70bafa53588aa'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=Xe9giSuY8ATMP6ad8U_MQGWkeAAWhMb2g1Nr8ppdWxs-1752752026-1.0.1.1-RTRWIgw1iRimy3WgZD0WpYwTGWk9fL1jdI1Dkr9x67YUF5agRMMUAvBDYmJvQRmkzy2OBTxkIxxTm_CAlaytDe1EhfgPAsWoMpHcJ.3jm18; path=/; expires=Thu, 17-Jul-25 12:03:46 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=CJ01XyGYIZtQUKt7GDw0EY1eXLA3jIxRaX3nKAjt2KQ-1752752026010-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '96096d1c4801837d-BOM'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-07-17 17:03:46,036 - openai._base_client - DEBUG - request_id: req_6680247d36209e264be70bafa53588aa
+2025-07-17 17:03:46,041 - VasaviRAG - INFO - Rewritten query: shirt, casual shirt, vasavi shirts
+2025-07-17 17:03:46,042 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/embeddings', 'files': None, 'idempotency_key': 'stainless-python-retry-111d5f55-f2ed-48db-98f8-05922d0a0dcc', 'post_parser': <function AsyncEmbeddings.create.<locals>.parser at 0x0000013C012028E0>, 'json_data': {'input': ['shirt, casual shirt, vasavi shirts'], 'model': 'text-embedding-3-large', 'encoding_format': 'base64'}}
+2025-07-17 17:03:46,043 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/embeddings
+2025-07-17 17:03:46,044 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-17 17:03:46,044 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-17 17:03:46,045 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-17 17:03:46,045 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-17 17:03:46,045 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-17 17:03:47,454 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 11:33:47 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-model', b'text-embedding-3-large'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'163'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'via', b'envoy-router-59999c87cc-mgf6t'), (b'x-envoy-upstream-service-time', b'167'), (b'x-ratelimit-limit-requests', b'3000'), (b'x-ratelimit-limit-tokens', b'1000000'), (b'x-ratelimit-remaining-requests', b'2999'), (b'x-ratelimit-remaining-tokens', b'999992'), (b'x-ratelimit-reset-requests', b'20ms'), (b'x-ratelimit-reset-tokens', b'0s'), (b'x-request-id', b'req_e4993c2cf2ae980c579d1efc6de3553e'), (b'cf-cache-status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96096d22bcd3837d-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-17 17:03:47,466 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-17 17:03:47,467 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-17 17:03:47,721 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-17 17:03:47,721 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-17 17:03:47,721 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-17 17:03:47,721 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/embeddings "200 OK" Headers({'date': 'Thu, 17 Jul 2025 11:33:47 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'openai-model': 'text-embedding-3-large', 'openai-organization': 'viv-2ysxog', 'openai-processing-ms': '163', 'openai-project': 'proj_lxf5EOiEBYmtUFE0a37znKxu', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'via': 'envoy-router-59999c87cc-mgf6t', 'x-envoy-upstream-service-time': '167', 'x-ratelimit-limit-requests': '3000', 'x-ratelimit-limit-tokens': '1000000', 'x-ratelimit-remaining-requests': '2999', 'x-ratelimit-remaining-tokens': '999992', 'x-ratelimit-reset-requests': '20ms', 'x-ratelimit-reset-tokens': '0s', 'x-request-id': 'req_e4993c2cf2ae980c579d1efc6de3553e', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96096d22bcd3837d-BOM', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-07-17 17:03:47,721 - openai._base_client - DEBUG - request_id: req_e4993c2cf2ae980c579d1efc6de3553e
+2025-07-17 17:03:47,721 - VasaviRAG - INFO - Querying Pinecone with top_k=50, filter: {'category': 'Shirt'}
+2025-07-17 17:03:49,738 - VasaviRAG - INFO - Pinecone attempt 1: 11 matches found
+2025-07-17 17:03:49,738 - VasaviRAG - INFO - Top 5 matches (style_name, category, score):
+2025-07-17 17:03:49,739 - VasaviRAG - INFO -   - Camisa Classic Shirt (Shirt) - Score: 0.5152
+2025-07-17 17:03:49,739 - VasaviRAG - INFO -   - Brisa Rosa Oversized Shirt (Shirt) - Score: 0.4894
+2025-07-17 17:03:49,739 - VasaviRAG - INFO -   - Marina Classic Shirt (Shirt) - Score: 0.4889
+2025-07-17 17:03:49,739 - VasaviRAG - INFO -   - Carril & Collar (Shirt) - Score: 0.4706
+2025-07-17 17:03:49,740 - VasaviRAG - INFO -   - Discordo Shirt (Shirt) - Score: 0.4701
+2025-07-17 17:03:50,081 - VasaviRAG - INFO - Applying soft filters/boosting...
+2025-07-17 17:03:50,081 - VasaviRAG - INFO - Top 5 results after re-ranking (style_name, category, CE score):
+2025-07-17 17:03:50,082 - VasaviRAG - INFO -   - Marina Classic Shirt (Shirt) - CE Score: 0.5386
+2025-07-17 17:03:50,082 - VasaviRAG - INFO -   - FIELD FLANNEL (Shirt) - CE Score: 0.5331
+2025-07-17 17:03:50,082 - VasaviRAG - INFO -   - Discordo Shirt (Shirt) - CE Score: 0.5169
+2025-07-17 17:03:50,082 - VasaviRAG - INFO -   - BOXED BREEZE (Shirt) - CE Score: 0.5132
+2025-07-17 17:03:50,082 - VasaviRAG - INFO -   - Brisa Rosa Oversized Shirt (Shirt) - CE Score: 0.5128
+2025-07-17 17:03:50,083 - __main__ - INFO - Tool ended: recommendation_agent_tool
+2025-07-17 17:03:50,083 - __main__ - DEBUG - Router intent: recommendation
+2025-07-17 17:03:50,084 - __main__ - DEBUG - Routing to response node: agent_output present.
+2025-07-17 17:03:50,084 - __main__ - DEBUG - Chain ended for event: router
+2025-07-17 17:03:50,085 - __main__ - DEBUG - Chain ended for event: supervisor
+2025-07-17 17:03:50,088 - __main__ - DEBUG - Chain ended for event: response
+2025-07-17 17:03:50,089 - __main__ - DEBUG - Chain ended for event: LangGraph
+2025-07-17 17:03:50,089 - __main__ - INFO - Streaming completed for session: 99b4ea4b-eebd-4543-a3da-4aa49a1343f1
+2025-07-17 17:03:50,090 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-07-17 17:04:03,941 - __main__ - INFO - Chat request: message='i wanna buy a shirt', checkpoint_id='None'
+2025-07-17 17:04:03,941 - __main__ - INFO - New session: c0897d56-ad86-4a52-a853-e82f31ee4334
+2025-07-17 17:04:03,941 - __main__ - DEBUG - Normalized query: 'i wanna buy a shirt', Words: ['i', 'wanna', 'buy', 'a', 'shirt']
+2025-07-17 17:04:03,952 - __main__ - DEBUG - Input: Query='i wanna buy a shirt', Normalized='i wanna buy a shirt', History='', Context='{}'
+2025-07-17 17:04:03,952 - __main__ - WARNING - Prompt error on attempt 1: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:04:03,952 - __main__ - WARNING - Prompt error on attempt 2: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:04:03,953 - __main__ - WARNING - Prompt error on attempt 3: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:04:03,954 - __main__ - ERROR - Failed to process prompt after 3 attempts. Using keyword-based intent: recommendation
+2025-07-17 17:04:03,954 - __main__ - INFO - Decision: Intent=recommendation, Tool=recommendation_agent_tool, Confidence=0.90, Reasoning=Prompt failed after 3 attempts: '\n  "intent"'. Used keyword-based intent: recommendation
+2025-07-17 17:04:03,954 - __main__ - INFO - Tool started: recommendation_agent_tool
+2025-07-17 17:04:03,955 - __main__ - DEBUG - Recommendation query: 'i wanna buy a shirt', Detected category: Shirt
+2025-07-17 17:04:03,955 - VasaviRAG - INFO - Starting RAG process for query: 'i wanna buy a shirt', Category: Shirt
+2025-07-17 17:04:03,956 - VasaviRAG - INFO - Extracted filters: {'category': 'Shirt'}
+2025-07-17 17:04:03,956 - VasaviRAG - INFO - Final filters: {'category': 'Shirt'}
+2025-07-17 17:04:03,956 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-30e17d96-f107-4c59-900f-ac511df29f28', 'json_data': {'messages': [{'role': 'system', 'content': "You are a fashion search expert. Rewrite the query to be short and semantically rich, including standard category, material, and price if mentioned. Emphasize 'denim' for 'jeans' queries. Prioritize keywords: shirts, tshirts, jackets, clothes, bottoms, corset, bodysuit, jeans. For general queries like 'clothes' or 'recommendation', use broad terms like 'vasavi clothing, new arrivals, fashion items'. Examples: 'Show me jeans under 3000' -> 'denim jeans, blue pants, under 3000';'Show me jackets' -> 'jacket, outerwear, vasavi jackets';'Recommend shirts' -> 'shirt, casual shirt, vasavi shirts';'Tshirts under 2000' -> 't-shirt, casual t-shirt, under 2000';'Clothes' -> 'vasavi clothing, new arrivals, fashion items';'A black item' -> 'black clothing, dark apparel, black fashion';"}, {'role': 'user', 'content': 'Rewrite this query: i wanna buy a shirt'}], 'model': 'gpt-4o-mini', 'temperature': 0.3}}
+2025-07-17 17:04:03,958 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-07-17 17:04:03,958 - httpcore.connection - DEBUG - close.started
+2025-07-17 17:04:03,958 - httpcore.connection - DEBUG - close.complete
+2025-07-17 17:04:03,958 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-07-17 17:04:03,960 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000013C794B5390>
+2025-07-17 17:04:03,960 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x0000013C7EDBCEF0> server_hostname='api.openai.com' timeout=5.0
+2025-07-17 17:04:03,973 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x0000013C0018AA50>
+2025-07-17 17:04:03,974 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-17 17:04:03,974 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-17 17:04:03,974 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-17 17:04:03,974 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-17 17:04:03,975 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 11:34:04 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'627'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'630'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199791'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'62ms'), (b'x-request-id', b'req_cd6bf05a33a395504ae5a1b13ed1a92f'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=7wsqsEnH2_ePn0A3sCGPZqE3h9KesZg15y6lNEV5fWY-1752752044-1.0.1.1-GiblarnfVee2QkNZXUt6qlwaPn.o2raTKWNC64peqgH7j6h7Rn5QuOqY8j8aAng6Qsy7La2qdCwhbLmREQzAv_tY1k3Sl6lD.3dKmwmVt88; path=/; expires=Thu, 17-Jul-25 12:04:04 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=mh2.fKnS_F5BE0..VuZy840f1sz1TZ.CNCPKjm5.LT4-1752752044885-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96096d92cb924811-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-17 17:04:04,900 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-17 17:04:04,900 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 17 Jul 2025 11:34:04 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'viv-2ysxog'), ('openai-processing-ms', '627'), ('openai-project', 'proj_lxf5EOiEBYmtUFE0a37znKxu'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '630'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199791'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '62ms'), ('x-request-id', 'req_cd6bf05a33a395504ae5a1b13ed1a92f'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=7wsqsEnH2_ePn0A3sCGPZqE3h9KesZg15y6lNEV5fWY-1752752044-1.0.1.1-GiblarnfVee2QkNZXUt6qlwaPn.o2raTKWNC64peqgH7j6h7Rn5QuOqY8j8aAng6Qsy7La2qdCwhbLmREQzAv_tY1k3Sl6lD.3dKmwmVt88; path=/; expires=Thu, 17-Jul-25 12:04:04 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=mh2.fKnS_F5BE0..VuZy840f1sz1TZ.CNCPKjm5.LT4-1752752044885-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '96096d92cb924811-BOM'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-07-17 17:04:04,900 - openai._base_client - DEBUG - request_id: req_cd6bf05a33a395504ae5a1b13ed1a92f
+2025-07-17 17:04:04,900 - VasaviRAG - INFO - Rewritten query: shirt, casual shirt, vasavi shirts
+2025-07-17 17:04:04,900 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/embeddings', 'files': None, 'idempotency_key': 'stainless-python-retry-12834a98-6fcb-4363-b697-e7b094e1b9df', 'post_parser': <function AsyncEmbeddings.create.<locals>.parser at 0x0000013C7F18AAC0>, 'json_data': {'input': ['shirt, casual shirt, vasavi shirts'], 'model': 'text-embedding-3-large', 'encoding_format': 'base64'}}
+2025-07-17 17:04:04,900 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/embeddings
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-17 17:04:04,900 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-17 17:04:05,608 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 11:34:05 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-model', b'text-embedding-3-large'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'44'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'via', b'envoy-router-5578676cb9-hmjdn'), (b'x-envoy-upstream-service-time', b'61'), (b'x-ratelimit-limit-requests', b'3000'), (b'x-ratelimit-limit-tokens', b'1000000'), (b'x-ratelimit-remaining-requests', b'2999'), (b'x-ratelimit-remaining-tokens', b'999992'), (b'x-ratelimit-reset-requests', b'20ms'), (b'x-ratelimit-reset-tokens', b'0s'), (b'x-request-id', b'req_810631601155f8a25de95eda3b4774f2'), (b'cf-cache-status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96096d9899404811-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-17 17:04:05,621 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-17 17:04:05,621 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-17 17:04:05,713 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-17 17:04:05,713 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-17 17:04:05,713 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-17 17:04:05,713 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/embeddings "200 OK" Headers({'date': 'Thu, 17 Jul 2025 11:34:05 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'openai-model': 'text-embedding-3-large', 'openai-organization': 'viv-2ysxog', 'openai-processing-ms': '44', 'openai-project': 'proj_lxf5EOiEBYmtUFE0a37znKxu', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'via': 'envoy-router-5578676cb9-hmjdn', 'x-envoy-upstream-service-time': '61', 'x-ratelimit-limit-requests': '3000', 'x-ratelimit-limit-tokens': '1000000', 'x-ratelimit-remaining-requests': '2999', 'x-ratelimit-remaining-tokens': '999992', 'x-ratelimit-reset-requests': '20ms', 'x-ratelimit-reset-tokens': '0s', 'x-request-id': 'req_810631601155f8a25de95eda3b4774f2', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96096d9899404811-BOM', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-07-17 17:04:05,713 - openai._base_client - DEBUG - request_id: req_810631601155f8a25de95eda3b4774f2
+2025-07-17 17:04:05,713 - VasaviRAG - INFO - Querying Pinecone with top_k=50, filter: {'category': 'Shirt'}
+2025-07-17 17:04:06,663 - VasaviRAG - INFO - Pinecone attempt 1: 11 matches found
+2025-07-17 17:04:06,663 - VasaviRAG - INFO - Top 5 matches (style_name, category, score):
+2025-07-17 17:04:06,663 - VasaviRAG - INFO -   - Camisa Classic Shirt (Shirt) - Score: 0.5152
+2025-07-17 17:04:06,663 - VasaviRAG - INFO -   - Brisa Rosa Oversized Shirt (Shirt) - Score: 0.4895
+2025-07-17 17:04:06,663 - VasaviRAG - INFO -   - Marina Classic Shirt (Shirt) - Score: 0.4889
+2025-07-17 17:04:06,663 - VasaviRAG - INFO -   - Carril & Collar (Shirt) - Score: 0.4707
+2025-07-17 17:04:06,663 - VasaviRAG - INFO -   - Discordo Shirt (Shirt) - Score: 0.4701
+2025-07-17 17:04:06,916 - VasaviRAG - INFO - Applying soft filters/boosting...
+2025-07-17 17:04:06,916 - VasaviRAG - INFO - Top 5 results after re-ranking (style_name, category, CE score):
+2025-07-17 17:04:06,916 - VasaviRAG - INFO -   - Marina Classic Shirt (Shirt) - CE Score: 0.5386
+2025-07-17 17:04:06,916 - VasaviRAG - INFO -   - FIELD FLANNEL (Shirt) - CE Score: 0.5331
+2025-07-17 17:04:06,916 - VasaviRAG - INFO -   - Discordo Shirt (Shirt) - CE Score: 0.5169
+2025-07-17 17:04:06,916 - VasaviRAG - INFO -   - BOXED BREEZE (Shirt) - CE Score: 0.5132
+2025-07-17 17:04:06,916 - VasaviRAG - INFO -   - Brisa Rosa Oversized Shirt (Shirt) - CE Score: 0.5128
+2025-07-17 17:04:06,916 - __main__ - INFO - Tool ended: recommendation_agent_tool
+2025-07-17 17:04:06,916 - __main__ - DEBUG - Router intent: recommendation
+2025-07-17 17:04:06,916 - __main__ - DEBUG - Routing to response node: agent_output present.
+2025-07-17 17:04:06,916 - __main__ - DEBUG - Chain ended for event: router
+2025-07-17 17:04:06,916 - __main__ - DEBUG - Chain ended for event: supervisor
+2025-07-17 17:04:06,927 - __main__ - DEBUG - Chain ended for event: response
+2025-07-17 17:04:06,928 - __main__ - DEBUG - Chain ended for event: LangGraph
+2025-07-17 17:04:06,928 - __main__ - INFO - Streaming completed for session: c0897d56-ad86-4a52-a853-e82f31ee4334
+2025-07-17 17:37:25,693 - sentence_transformers.cross_encoder.CrossEncoder - INFO - Use pytorch device: cpu
+2025-07-17 17:37:26,411 - asyncio - DEBUG - Using proactor: IocpProactor
+2025-07-17 17:38:00,131 - __main__ - INFO - Chat request: message='i wanna buy a shirt', checkpoint_id='None'
+2025-07-17 17:38:00,149 - mysql.connector - DEBUG - Building SSL context
+2025-07-17 17:38:00,169 - mysql.connector - DEBUG - Switching to SSL
+2025-07-17 17:38:00,180 - mysql.connector - DEBUG - SSL has been enabled
+2025-07-17 17:38:00,180 - mysql.connector - DEBUG - Starting authorization phase
+2025-07-17 17:38:00,180 - mysql.connector - DEBUG - The provided initial strategy is caching_sha2_password
+2025-07-17 17:38:00,180 - mysql.connector - INFO - package: mysql.connector.plugins
+2025-07-17 17:38:00,180 - mysql.connector - INFO - plugin_name: caching_sha2_password
+2025-07-17 17:38:00,181 - mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-07-17 17:38:00,181 - mysql.connector - DEBUG - Exchanging further packets
+2025-07-17 17:38:00,184 - __main__ - ERROR - Error connecting to MySQL database: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-07-17 17:38:00,185 - __main__ - INFO - New session: 70a73dfe-b5a2-4fd3-a439-3d55bdecc494
+2025-07-17 17:38:00,191 - __main__ - DEBUG - Normalized query: 'i wanna buy a shirt', Words: ['i', 'wanna', 'buy', 'a', 'shirt']
+2025-07-17 17:38:00,193 - __main__ - DEBUG - Input: Query='i wanna buy a shirt', Normalized='i wanna buy a shirt', History='', Context='{}'
+2025-07-17 17:38:00,193 - __main__ - WARNING - Prompt error on attempt 1: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:38:00,193 - __main__ - WARNING - Prompt error on attempt 2: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:38:00,193 - __main__ - WARNING - Prompt error on attempt 3: '\n  "intent"'. Trying fallback prompt.
+2025-07-17 17:38:00,193 - __main__ - ERROR - Failed to process prompt after 3 attempts. Using keyword-based intent: recommendation
+2025-07-17 17:38:00,193 - __main__ - INFO - Decision: Intent=recommendation, Tool=recommendation_agent_tool, Confidence=0.90, Reasoning=Prompt failed after 3 attempts: '\n  "intent"'. Used keyword-based intent: recommendation
+2025-07-17 17:38:00,194 - __main__ - INFO - Tool started: recommendation_agent_tool
+2025-07-17 17:38:00,194 - __main__ - DEBUG - Recommendation query: 'i wanna buy a shirt', Detected category: Shirt
+2025-07-17 17:38:00,194 - VasaviRAG - INFO - Starting RAG process for query: 'i wanna buy a shirt', Category: Shirt
+2025-07-17 17:38:00,196 - VasaviRAG - INFO - Extracted filters: {'category': 'Shirt'}
+2025-07-17 17:38:00,196 - VasaviRAG - INFO - Final filters: {'category': 'Shirt'}
+2025-07-17 17:38:00,203 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-a577c3d6-15ba-4ec7-b5b8-926dc1b1996e', 'json_data': {'messages': [{'role': 'system', 'content': "You are a fashion search expert. Rewrite the query to be short and semantically rich, including standard category, material, and price if mentioned. Emphasize 'denim' for 'jeans' queries. Prioritize keywords: shirts, tshirts, jackets, clothes, bottoms, corset, bodysuit, jeans. For general queries like 'clothes' or 'recommendation', use broad terms like 'vasavi clothing, new arrivals, fashion items'. Examples: 'Show me jeans under 3000' -> 'denim jeans, blue pants, under 3000';'Show me jackets' -> 'jacket, outerwear, vasavi jackets';'Recommend shirts' -> 'shirt, casual shirt, vasavi shirts';'Tshirts under 2000' -> 't-shirt, casual t-shirt, under 2000';'Clothes' -> 'vasavi clothing, new arrivals, fashion items';'A black item' -> 'black clothing, dark apparel, black fashion';"}, {'role': 'user', 'content': 'Rewrite this query: i wanna buy a shirt'}], 'model': 'gpt-4o-mini', 'temperature': 0.3}}
+2025-07-17 17:38:00,203 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-07-17 17:38:00,204 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-07-17 17:38:00,214 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002936DCC2FD0>
+2025-07-17 17:38:00,214 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000002932DAF6570> server_hostname='api.openai.com' timeout=5.0
+2025-07-17 17:38:00,227 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x000002936DC95B50>
+2025-07-17 17:38:00,228 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-17 17:38:00,228 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-17 17:38:00,228 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-17 17:38:00,229 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-17 17:38:00,229 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-17 17:38:01,039 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 12:08:01 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'388'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'390'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199791'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'62ms'), (b'x-request-id', b'req_b98aabd7d3647eea965f0e65dc85ac25'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=lp8JQHhzpgnzLo8KR4z0Id8_FHQdEhlCDImOjImEzQw-1752754081-1.0.1.1-.4wSoAUHXqHXiaEtRWiQbawtHcPaOARyE.6C6gFoQdy2Bq1HERnpuQGHzILcgi3qGprikZiWEHBNf3FWKpvT_8IBHNh_aXUT7xYOCcRdIP0; path=/; expires=Thu, 17-Jul-25 12:38:01 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=24wWErCYt4rNHQvp3uDu1rdNt6Nh1EtHa.pUGcIvkjc-1752754081020-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96099f4959d349a6-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-17 17:38:01,041 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-17 17:38:01,042 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-17 17:38:01,052 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-17 17:38:01,052 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-17 17:38:01,053 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-17 17:38:01,054 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 17 Jul 2025 12:08:01 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'viv-2ysxog'), ('openai-processing-ms', '388'), ('openai-project', 'proj_lxf5EOiEBYmtUFE0a37znKxu'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '390'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199791'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '62ms'), ('x-request-id', 'req_b98aabd7d3647eea965f0e65dc85ac25'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=lp8JQHhzpgnzLo8KR4z0Id8_FHQdEhlCDImOjImEzQw-1752754081-1.0.1.1-.4wSoAUHXqHXiaEtRWiQbawtHcPaOARyE.6C6gFoQdy2Bq1HERnpuQGHzILcgi3qGprikZiWEHBNf3FWKpvT_8IBHNh_aXUT7xYOCcRdIP0; path=/; expires=Thu, 17-Jul-25 12:38:01 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=24wWErCYt4rNHQvp3uDu1rdNt6Nh1EtHa.pUGcIvkjc-1752754081020-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '96099f4959d349a6-BOM'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-07-17 17:38:01,054 - openai._base_client - DEBUG - request_id: req_b98aabd7d3647eea965f0e65dc85ac25
+2025-07-17 17:38:01,057 - VasaviRAG - INFO - Rewritten query: shirt, casual shirt, vasavi shirts
+2025-07-17 17:38:01,058 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/embeddings', 'files': None, 'idempotency_key': 'stainless-python-retry-fa8f6217-4ac2-4f06-9387-35366c7ff999', 'post_parser': <function AsyncEmbeddings.create.<locals>.parser at 0x0000029380F33BA0>, 'json_data': {'input': ['shirt, casual shirt, vasavi shirts'], 'model': 'text-embedding-3-large', 'encoding_format': 'base64'}}
+2025-07-17 17:38:01,059 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/embeddings
+2025-07-17 17:38:01,059 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-17 17:38:01,059 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-17 17:38:01,060 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-17 17:38:01,060 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-17 17:38:01,060 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-17 17:38:02,318 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 12:08:02 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-model', b'text-embedding-3-large'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'230'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'via', b'envoy-router-7d8cc686f8-nr8h2'), (b'x-envoy-upstream-service-time', b'235'), (b'x-ratelimit-limit-requests', b'3000'), (b'x-ratelimit-limit-tokens', b'1000000'), (b'x-ratelimit-remaining-requests', b'2999'), (b'x-ratelimit-remaining-tokens', b'999992'), (b'x-ratelimit-reset-requests', b'20ms'), (b'x-ratelimit-reset-tokens', b'0s'), (b'x-request-id', b'req_dbae323af566ea496a89d827974f1876'), (b'cf-cache-status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'96099f4e8bd749a6-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-17 17:38:02,319 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-17 17:38:02,320 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-17 17:38:02,569 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-17 17:38:02,570 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-17 17:38:02,570 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-17 17:38:02,571 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/embeddings "200 OK" Headers({'date': 'Thu, 17 Jul 2025 12:08:02 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'openai-model': 'text-embedding-3-large', 'openai-organization': 'viv-2ysxog', 'openai-processing-ms': '230', 'openai-project': 'proj_lxf5EOiEBYmtUFE0a37znKxu', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'via': 'envoy-router-7d8cc686f8-nr8h2', 'x-envoy-upstream-service-time': '235', 'x-ratelimit-limit-requests': '3000', 'x-ratelimit-limit-tokens': '1000000', 'x-ratelimit-remaining-requests': '2999', 'x-ratelimit-remaining-tokens': '999992', 'x-ratelimit-reset-requests': '20ms', 'x-ratelimit-reset-tokens': '0s', 'x-request-id': 'req_dbae323af566ea496a89d827974f1876', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '96099f4e8bd749a6-BOM', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-07-17 17:38:02,572 - openai._base_client - DEBUG - request_id: req_dbae323af566ea496a89d827974f1876
+2025-07-17 17:38:02,574 - VasaviRAG - INFO - Querying Pinecone with top_k=50, filter: {'category': 'Shirt'}
+2025-07-17 17:38:05,249 - VasaviRAG - INFO - Pinecone attempt 1: 11 matches found
+2025-07-17 17:38:05,250 - VasaviRAG - INFO - Top 5 matches (style_name, category, score):
+2025-07-17 17:38:05,251 - VasaviRAG - INFO -   - Camisa Classic Shirt (Shirt) - Score: 0.5151
+2025-07-17 17:38:05,251 - VasaviRAG - INFO -   - Brisa Rosa Oversized Shirt (Shirt) - Score: 0.4893
+2025-07-17 17:38:05,252 - VasaviRAG - INFO -   - Marina Classic Shirt (Shirt) - Score: 0.4888
+2025-07-17 17:38:05,253 - VasaviRAG - INFO -   - Carril & Collar (Shirt) - Score: 0.4706
+2025-07-17 17:38:05,253 - VasaviRAG - INFO -   - Discordo Shirt (Shirt) - Score: 0.4700
+2025-07-17 17:38:05,592 - VasaviRAG - INFO - Applying soft filters/boosting...
+2025-07-17 17:38:05,592 - VasaviRAG - INFO - Top 5 results after re-ranking (style_name, category, CE score):
+2025-07-17 17:38:05,593 - VasaviRAG - INFO -   - Marina Classic Shirt (Shirt) - CE Score: 0.5386
+2025-07-17 17:38:05,593 - VasaviRAG - INFO -   - FIELD FLANNEL (Shirt) - CE Score: 0.5331
+2025-07-17 17:38:05,593 - VasaviRAG - INFO -   - Discordo Shirt (Shirt) - CE Score: 0.5169
+2025-07-17 17:38:05,593 - VasaviRAG - INFO -   - BOXED BREEZE (Shirt) - CE Score: 0.5132
+2025-07-17 17:38:05,593 - VasaviRAG - INFO -   - Brisa Rosa Oversized Shirt (Shirt) - CE Score: 0.5128
+2025-07-17 17:38:05,594 - __main__ - INFO - Tool ended: recommendation_agent_tool
+2025-07-17 17:38:05,594 - __main__ - DEBUG - Router intent: recommendation
+2025-07-17 17:38:05,594 - __main__ - DEBUG - Routing to response node: agent_output present.
+2025-07-17 17:38:05,596 - __main__ - DEBUG - Chain ended for event: router
+2025-07-17 17:38:05,597 - __main__ - DEBUG - Chain ended for event: supervisor
+2025-07-17 17:38:05,600 - mysql.connector - DEBUG - Building SSL context
+2025-07-17 17:38:05,621 - mysql.connector - DEBUG - Switching to SSL
+2025-07-17 17:38:05,624 - mysql.connector - DEBUG - SSL has been enabled
+2025-07-17 17:38:05,624 - mysql.connector - DEBUG - Starting authorization phase
+2025-07-17 17:38:05,624 - mysql.connector - DEBUG - The provided initial strategy is caching_sha2_password
+2025-07-17 17:38:05,624 - mysql.connector - DEBUG - Exchanging further packets
+2025-07-17 17:38:05,626 - __main__ - ERROR - Error connecting to MySQL database: 1045 (28000): Access denied for user 'root'@'localhost' (using password: YES)
+2025-07-17 17:38:05,628 - __main__ - DEBUG - Chain ended for event: response
+2025-07-17 17:38:05,629 - __main__ - DEBUG - Chain ended for event: LangGraph
+2025-07-17 17:38:05,630 - __main__ - INFO - Streaming completed for session: 70a73dfe-b5a2-4fd3-a439-3d55bdecc494
+2025-07-17 17:38:05,630 - asyncio - ERROR - Exception in callback _ProactorBasePipeTransport._call_connection_lost(None)
+handle: <Handle _ProactorBasePipeTransport._call_connection_lost(None)>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 84, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Program Files\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
+    self._sock.shutdown(socket.SHUT_RDWR)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host

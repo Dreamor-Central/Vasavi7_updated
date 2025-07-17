@@ -1,7 +1,13 @@
 import { useState } from "react";
 
-const InputBar = ({ currentMessage, setCurrentMessage, onSubmit }) => {
-    const handleChange = (e) => {
+interface InputBarProps {
+    currentMessage: string;
+    setCurrentMessage: (message: string) => void;
+    onSubmit: (e: React.FormEvent) => void;
+}
+
+const InputBar = ({ currentMessage, setCurrentMessage, onSubmit }: InputBarProps) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setCurrentMessage(e.target.value);
     };
 
