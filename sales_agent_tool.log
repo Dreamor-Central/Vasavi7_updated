@@ -303,3 +303,120 @@ Traceback (most recent call last):
   File "C:\Program Files\Python311\Lib\asyncio\proactor_events.py", line 165, in _call_connection_lost
     self._sock.shutdown(socket.SHUT_RDWR)
 ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+2025-07-18 00:02:37,991 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-07-18 00:02:45,097 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-07-18 00:02:45,863 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-07-18 00:02:45,863 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-07-18 00:02:45,863 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-07-18 00:02:45,863 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-07-18 00:02:47,002 - jax._src.path - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-07-18 00:02:48,868 - VasaviRAG - ERROR - Missing required environment variables: OPENAI_API_KEY or PINECONE_API_KEY
+2025-07-18 00:03:35,535 - numexpr.utils - INFO - NumExpr defaulting to 8 threads.
+2025-07-18 00:03:40,488 - tensorflow - DEBUG - Falling back to TensorFlow client; we recommended you install the Cloud TPU client directly with pip install cloud-tpu-client.
+2025-07-18 00:03:40,731 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-07-18 00:03:40,731 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-07-18 00:03:40,731 - h5py._conv - DEBUG - Creating converter from 7 to 5
+2025-07-18 00:03:40,731 - h5py._conv - DEBUG - Creating converter from 5 to 7
+2025-07-18 00:03:41,192 - jax._src.path - DEBUG - etils.epath was not found. Using pathlib for file I/O.
+2025-07-18 00:03:46,903 - sentence_transformers.cross_encoder.CrossEncoder - INFO - Use pytorch device: mps
+2025-07-18 00:03:51,546 - asyncio - DEBUG - Using selector: KqueueSelector
+2025-07-18 00:05:57,993 - __main__ - INFO - Chat request: message='i want to buy a jacket', checkpoint_id='None'
+2025-07-18 00:05:58,027 - mysql.connector - DEBUG - Building SSL context
+2025-07-18 00:05:58,092 - mysql.connector - DEBUG - Switching to SSL
+2025-07-18 00:05:58,106 - mysql.connector - DEBUG - SSL has been enabled
+2025-07-18 00:05:58,106 - mysql.connector - DEBUG - Starting authorization phase
+2025-07-18 00:05:58,106 - mysql.connector - DEBUG - The provided initial strategy is caching_sha2_password
+2025-07-18 00:05:58,106 - mysql.connector - INFO - package: mysql.connector.plugins
+2025-07-18 00:05:58,106 - mysql.connector - INFO - plugin_name: caching_sha2_password
+2025-07-18 00:05:58,106 - mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+2025-07-18 00:05:58,107 - mysql.connector - DEBUG - Exchanging further packets
+2025-07-18 00:05:58,110 - mysql.connector - DEBUG - caching_sha2_password completed succesfully
+2025-07-18 00:05:58,121 - __main__ - INFO - Successfully connected to the MySQL database
+2025-07-18 00:05:58,146 - __main__ - INFO - Stored chat log for session_id: f27db63e-a62a-49f7-bf6b-d072ecdcd3aa, intent: pending
+2025-07-18 00:05:58,146 - __main__ - INFO - New session: f27db63e-a62a-49f7-bf6b-d072ecdcd3aa
+2025-07-18 00:05:58,162 - __main__ - DEBUG - Normalized query: 'i want to buy a jacket', Words: ['i', 'want', 'to', 'buy', 'a', 'jacket']
+2025-07-18 00:05:58,166 - __main__ - DEBUG - Input: Query='i want to buy a jacket', Normalized='i want to buy a jacket', History='', Context='{}'
+2025-07-18 00:05:58,167 - __main__ - WARNING - Prompt error on attempt 1: '\n  "intent"'. Trying fallback prompt.
+2025-07-18 00:05:58,167 - __main__ - WARNING - Prompt error on attempt 2: '\n  "intent"'. Trying fallback prompt.
+2025-07-18 00:05:58,167 - __main__ - WARNING - Prompt error on attempt 3: '\n  "intent"'. Trying fallback prompt.
+2025-07-18 00:05:58,167 - __main__ - ERROR - Failed to process prompt after 3 attempts. Using keyword-based intent: recommendation
+2025-07-18 00:05:58,167 - __main__ - INFO - Decision: Intent=recommendation, Tool=recommendation_agent_tool, Confidence=0.90, Reasoning=Prompt failed after 3 attempts: '\n  "intent"'. Used keyword-based intent: recommendation
+2025-07-18 00:05:58,167 - __main__ - DEBUG - Recommendation query: 'i want to buy a jacket', Detected category: Jacket
+2025-07-18 00:05:58,168 - VasaviRAG - INFO - Starting RAG process for query: 'i want to buy a jacket', Category: Jacket
+2025-07-18 00:05:58,171 - VasaviRAG - INFO - Extracted filters: {'category': 'Jacket'}
+2025-07-18 00:05:58,171 - VasaviRAG - INFO - Final filters: {'category': 'Jacket'}
+2025-07-18 00:05:58,194 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-15c5d753-77d1-4351-a616-e73cc11bc5f6', 'json_data': {'messages': [{'role': 'system', 'content': "You are a fashion search expert. Rewrite the query to be short and semantically rich, including standard category, material, and price if mentioned. Emphasize 'denim' for 'jeans' queries. Prioritize keywords: shirts, tshirts, jackets, clothes, bottoms, corset, bodysuit, jeans. For general queries like 'clothes' or 'recommendation', use broad terms like 'vasavi clothing, new arrivals, fashion items'. Examples: 'Show me jeans under 3000' -> 'denim jeans, blue pants, under 3000';'Show me jackets' -> 'jacket, outerwear, vasavi jackets';'Recommend shirts' -> 'shirt, casual shirt, vasavi shirts';'Tshirts under 2000' -> 't-shirt, casual t-shirt, under 2000';'Clothes' -> 'vasavi clothing, new arrivals, fashion items';'A black item' -> 'black clothing, dark apparel, black fashion';"}, {'role': 'user', 'content': 'Rewrite this query: i want to buy a jacket'}], 'model': 'gpt-4o-mini', 'temperature': 0.3}}
+2025-07-18 00:05:58,195 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-07-18 00:05:58,196 - httpcore.connection - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-07-18 00:05:58,234 - httpcore.connection - DEBUG - connect_tcp.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x2f97efbe0>
+2025-07-18 00:05:58,234 - httpcore.connection - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x2b25c2ac0> server_hostname='api.openai.com' timeout=5.0
+2025-07-18 00:05:58,244 - httpcore.connection - DEBUG - start_tls.complete return_value=<httpcore._backends.anyio.AnyIOStream object at 0x2f97ef550>
+2025-07-18 00:05:58,244 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-18 00:05:58,244 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-18 00:05:58,245 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-18 00:05:58,245 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-18 00:05:58,245 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-18 00:05:59,443 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 18:36:00 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'375'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'x-envoy-upstream-service-time', b'377'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199790'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'63ms'), (b'x-request-id', b'req_4a73b376297bd75fb37c9725e4f812c5'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=Dlel__Vr9raSYYlw9MwU8rbQ4fMoYPY0gAAw2IE1Exo-1752777360-1.0.1.1-LJ1VO.vdKLLMapNVEBV1tXOnVEz6Y6S4PBgFxLbO4YcDaHIos2SOWX0bWQxKUUYnzetsEYXeyLWmjKDET4pURMI3tTRz1uF9flKZJmyeeyA; path=/; expires=Thu, 17-Jul-25 19:06:00 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=d5NUfkJla8I5VA83zPtXf37segbpoMiu8r93kX9ggTA-1752777360006-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'960bd79cfffcfb88-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-18 00:05:59,446 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-07-18 00:05:59,448 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-18 00:05:59,449 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-18 00:05:59,450 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-18 00:05:59,450 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-18 00:05:59,450 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 17 Jul 2025 18:36:00 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'viv-2ysxog'), ('openai-processing-ms', '375'), ('openai-project', 'proj_lxf5EOiEBYmtUFE0a37znKxu'), ('openai-version', '2020-10-01'), ('x-envoy-upstream-service-time', '377'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199790'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '63ms'), ('x-request-id', 'req_4a73b376297bd75fb37c9725e4f812c5'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=Dlel__Vr9raSYYlw9MwU8rbQ4fMoYPY0gAAw2IE1Exo-1752777360-1.0.1.1-LJ1VO.vdKLLMapNVEBV1tXOnVEz6Y6S4PBgFxLbO4YcDaHIos2SOWX0bWQxKUUYnzetsEYXeyLWmjKDET4pURMI3tTRz1uF9flKZJmyeeyA; path=/; expires=Thu, 17-Jul-25 19:06:00 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=d5NUfkJla8I5VA83zPtXf37segbpoMiu8r93kX9ggTA-1752777360006-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '960bd79cfffcfb88-BOM'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-07-18 00:05:59,451 - openai._base_client - DEBUG - request_id: req_4a73b376297bd75fb37c9725e4f812c5
+2025-07-18 00:05:59,461 - VasaviRAG - INFO - Rewritten query: jacket, outerwear, vasavi jackets
+2025-07-18 00:05:59,464 - openai._base_client - DEBUG - Request options: {'method': 'post', 'url': '/embeddings', 'files': None, 'idempotency_key': 'stainless-python-retry-b284753e-4ce3-409d-9bdb-633980ff822d', 'post_parser': <function AsyncEmbeddings.create.<locals>.parser at 0x2b5200a60>, 'json_data': {'input': ['jacket, outerwear, vasavi jackets'], 'model': 'text-embedding-3-large', 'encoding_format': 'base64'}}
+2025-07-18 00:05:59,465 - openai._base_client - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/embeddings
+2025-07-18 00:05:59,465 - httpcore.http11 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-07-18 00:05:59,466 - httpcore.http11 - DEBUG - send_request_headers.complete
+2025-07-18 00:05:59,466 - httpcore.http11 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-07-18 00:05:59,466 - httpcore.http11 - DEBUG - send_request_body.complete
+2025-07-18 00:05:59,466 - httpcore.http11 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-07-18 00:06:00,240 - httpcore.http11 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 17 Jul 2025 18:36:00 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-allow-origin', b'*'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-model', b'text-embedding-3-large'), (b'openai-organization', b'viv-2ysxog'), (b'openai-processing-ms', b'151'), (b'openai-project', b'proj_lxf5EOiEBYmtUFE0a37znKxu'), (b'openai-version', b'2020-10-01'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'via', b'envoy-router-59999c87cc-bgcvk'), (b'x-envoy-upstream-service-time', b'153'), (b'x-ratelimit-limit-requests', b'3000'), (b'x-ratelimit-limit-tokens', b'1000000'), (b'x-ratelimit-remaining-requests', b'2999'), (b'x-ratelimit-remaining-tokens', b'999992'), (b'x-ratelimit-reset-requests', b'20ms'), (b'x-ratelimit-reset-tokens', b'0s'), (b'x-request-id', b'req_89f445a104ec1de75f26fec4a19e066f'), (b'cf-cache-status', b'DYNAMIC'), (b'X-Content-Type-Options', b'nosniff'), (b'Server', b'cloudflare'), (b'CF-RAY', b'960bd7a49bd2fb88-BOM'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-07-18 00:06:00,241 - httpx - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2025-07-18 00:06:00,241 - httpcore.http11 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-07-18 00:06:00,244 - httpcore.http11 - DEBUG - receive_response_body.complete
+2025-07-18 00:06:00,244 - httpcore.http11 - DEBUG - response_closed.started
+2025-07-18 00:06:00,244 - httpcore.http11 - DEBUG - response_closed.complete
+2025-07-18 00:06:00,244 - openai._base_client - DEBUG - HTTP Response: POST https://api.openai.com/v1/embeddings "200 OK" Headers({'date': 'Thu, 17 Jul 2025 18:36:00 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'access-control-allow-origin': '*', 'access-control-expose-headers': 'X-Request-ID', 'openai-model': 'text-embedding-3-large', 'openai-organization': 'viv-2ysxog', 'openai-processing-ms': '151', 'openai-project': 'proj_lxf5EOiEBYmtUFE0a37znKxu', 'openai-version': '2020-10-01', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'via': 'envoy-router-59999c87cc-bgcvk', 'x-envoy-upstream-service-time': '153', 'x-ratelimit-limit-requests': '3000', 'x-ratelimit-limit-tokens': '1000000', 'x-ratelimit-remaining-requests': '2999', 'x-ratelimit-remaining-tokens': '999992', 'x-ratelimit-reset-requests': '20ms', 'x-ratelimit-reset-tokens': '0s', 'x-request-id': 'req_89f445a104ec1de75f26fec4a19e066f', 'cf-cache-status': 'DYNAMIC', 'x-content-type-options': 'nosniff', 'server': 'cloudflare', 'cf-ray': '960bd7a49bd2fb88-BOM', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2025-07-18 00:06:00,245 - openai._base_client - DEBUG - request_id: req_89f445a104ec1de75f26fec4a19e066f
+2025-07-18 00:06:00,250 - VasaviRAG - INFO - Querying Pinecone with top_k=50, filter: {'category': 'Jacket'}
+2025-07-18 00:06:02,006 - VasaviRAG - INFO - Pinecone attempt 1: 9 matches found
+2025-07-18 00:06:02,006 - VasaviRAG - INFO - Top 5 matches (style_name, category, score):
+2025-07-18 00:06:02,007 - VasaviRAG - INFO -   - SHANTI NOIR JACKET (Jacket) - Score: 0.5540
+2025-07-18 00:06:02,007 - VasaviRAG - INFO -   - ECHOES OF PAST JACKET (Jacket) - Score: 0.5451
+2025-07-18 00:06:02,007 - VasaviRAG - INFO -   - SASHIMI JACKET (Jacket) - Score: 0.5296
+2025-07-18 00:06:02,007 - VasaviRAG - INFO -   - EBON AURA LEATHER JACKET (Jacket) - Score: 0.5172
+2025-07-18 00:06:02,007 - VasaviRAG - INFO -   - WARPNET JACKET (Jacket) - Score: 0.5117
+2025-07-18 00:06:03,543 - VasaviRAG - INFO - Applying soft filters/boosting...
+2025-07-18 00:06:03,544 - VasaviRAG - INFO - Top 5 results after re-ranking (style_name, category, CE score):
+2025-07-18 00:06:03,544 - VasaviRAG - INFO -   - SHANTI NOIR JACKET (Jacket) - CE Score: 0.7113
+2025-07-18 00:06:03,544 - VasaviRAG - INFO -   - SASHIMI JACKET (Jacket) - CE Score: 0.5944
+2025-07-18 00:06:03,544 - VasaviRAG - INFO -   - EBON AURA LEATHER JACKET (Jacket) - CE Score: 0.5910
+2025-07-18 00:06:03,544 - VasaviRAG - INFO -   - TUNDRA GUARD JACKET (Jacket) - CE Score: 0.5471
+2025-07-18 00:06:03,544 - VasaviRAG - INFO -   - CROPPED TUNDRA GUARD (Jacket) - CE Score: 0.5379
+2025-07-18 00:06:03,555 - mysql.connector - DEBUG - Building SSL context
+2025-07-18 00:06:03,617 - mysql.connector - DEBUG - Switching to SSL
+2025-07-18 00:06:03,626 - mysql.connector - DEBUG - SSL has been enabled
+2025-07-18 00:06:03,626 - mysql.connector - DEBUG - Starting authorization phase
+2025-07-18 00:06:03,627 - mysql.connector - DEBUG - The provided initial strategy is caching_sha2_password
+2025-07-18 00:06:03,627 - mysql.connector - DEBUG - Exchanging further packets
+2025-07-18 00:06:03,627 - mysql.connector - DEBUG - caching_sha2_password completed succesfully
+2025-07-18 00:06:03,629 - __main__ - INFO - Successfully connected to the MySQL database
+2025-07-18 00:06:03,640 - __main__ - INFO - Stored chat log for session_id: f27db63e-a62a-49f7-bf6b-d072ecdcd3aa, intent: recommendation
+2025-07-18 00:06:03,644 - __main__ - DEBUG - Router intent: recommendation
+2025-07-18 00:06:03,644 - __main__ - DEBUG - Routing to response node: agent_output present.
+2025-07-18 00:06:03,645 - __main__ - DEBUG - Chain ended for event: router
+2025-07-18 00:06:03,646 - __main__ - DEBUG - Chain ended for event: supervisor
+2025-07-18 00:06:03,653 - mysql.connector - DEBUG - Building SSL context
+2025-07-18 00:06:03,707 - mysql.connector - DEBUG - Switching to SSL
+2025-07-18 00:06:03,712 - mysql.connector - DEBUG - SSL has been enabled
+2025-07-18 00:06:03,712 - mysql.connector - DEBUG - Starting authorization phase
+2025-07-18 00:06:03,712 - mysql.connector - DEBUG - The provided initial strategy is caching_sha2_password
+2025-07-18 00:06:03,713 - mysql.connector - DEBUG - Exchanging further packets
+2025-07-18 00:06:03,713 - mysql.connector - DEBUG - caching_sha2_password completed succesfully
+2025-07-18 00:06:03,713 - __main__ - INFO - Successfully connected to the MySQL database
+2025-07-18 00:06:03,759 - __main__ - ERROR - Error storing chat log: 1406 (22001): Data too long for column 'keywords' at row 1
+2025-07-18 00:06:03,762 - __main__ - DEBUG - Chain ended for event: response
+2025-07-18 00:06:03,764 - __main__ - DEBUG - Chain ended for event: LangGraph
+2025-07-18 00:06:03,764 - __main__ - INFO - Streaming completed for session: f27db63e-a62a-49f7-bf6b-d072ecdcd3aa

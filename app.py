@@ -41,7 +41,7 @@ required_env_vars = ["TAVILY_API_KEY", "OPENAI_API_KEY", "PINECONE_API_KEY"]
 for var in required_env_vars:
     if not os.getenv(var):
         logger.error(f"Environment variable '{var}' is missing.")
-        raise ValueValueError(f"Environment variable '{var}' is required.")
+        raise ValueError(f"Environment variable '{var}' is required.")
 
 # === Database Configuration ===
 def get_db_connection():
@@ -50,7 +50,7 @@ def get_db_connection():
             host="localhost",
             database="chat_history",
             user="root",
-            password="mysecretpassword"
+            password="password"
         )
         if connection.is_connected():
             logger.info("Successfully connected to the MySQL database")
@@ -918,90 +918,4 @@ async def chat_stream(
 # === Test Script ===
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8001, log_level="info")
-```
 
-### Setup Instructions
-1. **Replace MySQL Credentials**:
-   - In `get_db_connection`, update `host`, `database`, `user`, and `password` with your actual MySQL credentials:
-     ```python
-     host="your_mysql_host",  # e.g., "localhost" or "mysql.example.com"
-     database="chat_history",
-     user="your_username",    # e.g., "root"
-     password="your_password" # e.g., "mysecretpassword"
-     ```
-
-2. **Create Database and Table**:
-   Run the following SQL to set up the `chat_history` database and `chat_log` table (already provided by you):
-   ```sql
-   CREATE DATABASE IF NOT EXISTS chat_history;
-   USE chat_history;
-   CREATE TABLE chat_log (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       timestamp DATETIME NOT NULL,
-       session_id VARCHAR(36) NOT NULL,
-       user_message TEXT NOT NULL,
-       response JSON NOT NULL,
-       intent VARCHAR(50),
-       products VARCHAR(255),
-       categories VARCHAR(255),
-       sentiment FLOAT,
-       keywords VARCHAR(255),
-       returns_count INT DEFAULT 0,
-       exchanges_count INT DEFAULT 0,
-       INDEX idx_session_id (session_id),
-       INDEX idx_intent (intent)
-   );
-   ```
-
-3. **Environment Variables**:
-   Ensure you have a `.env` file with the required non-MySQL variables:
-   ```
-   TAVILY_API_KEY=your_tavily_api_key
-   OPENAI_API_KEY=your_openai_api_key
-   PINECONE_API_KEY=your_pinecone_api_key
-   ```
-
-4. **Dependencies**:
-   Install required Python packages:
-   ```bash
-   pip install fastapi uvicorn mysql-connector-python langchain langchain-openai langchain-community python-dotenv
-   ```
-   Ensure `sales.py`, `semanticrag.py`, and `styling.py` are available and correctly implemented.
-
-5. **Run the Application**:
-   Save the code as `main.py` and run:
-   ```bash
-   python main.py
-   ```
-   The FastAPI server will start at `http://0.0.0.0:8001`. Test the `/chat/stream` endpoint:
-   ```bash
-   curl -X POST "http://localhost:8001/chat/stream?message=Show%20me%20some%20jackets"
-   ```
-
-6. **Test Database Connection**:
-   Verify the connection with this standalone script:
-   ```python
-   import mysql.connector
-   from mysql.connector import Error
-
-   def test_db_connection():
-       try:
-           connection = mysql.connector.connect(
-               host="localhost",
-               database="chat_history",
-               user="root",
-               password="mysecretpassword"
-           )
-           if connection.is_connected():
-               print("Connection successful!")
-               cursor = connection.cursor()
-               cursor.execute("SELECT DATABASE();")
-               db_name = cursor.fetchone()[0]
-               print(f"Connected to database: {db_name}")
-               cursor.close()
-               connection.close()
-       except Error as e:
-           print(f"Error: {e}")
-
-   if __name__ == "__main__":
-       test_db_connection()
