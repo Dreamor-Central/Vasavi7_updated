@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: vasavi_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+      MONGO_INITDB_DATABASE: product_database
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - vasavi_network
+
+  postgresql:
+    image: postgres:15
+    container_name: vasavi_postgresql
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: products
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgresql_data:/var/lib/postgresql/data
+    networks:
+      - vasavi_network
+
+volumes:
+  mongodb_data:
+  postgresql_data:
+
+networks:
+  vasavi_network:
+    driver: bridge 

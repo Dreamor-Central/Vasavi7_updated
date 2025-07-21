@@ -1,22 +1,34 @@
-pandas
-neo4j 
-openai
-python-dotenv
-openai
-pinecone
-sqlite-utils
-sentence_transformers
-nltk
-rank-bm25
-langchain_core
-langchain_openai
-redis
-langchain
-fuzzywuzzy 
-python-Levenshtein
-langgraph
-langchain-community
-fastapi
-langsmith
-uvicorn
-python-dotenv
+# Core FastAPI and web dependencies
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+python-multipart==0.0.6
+pydantic==2.5.0
+
+# Database dependencies
+sqlalchemy==2.0.23
+asyncpg==0.29.0
+pymongo==4.6.0
+motor==3.3.2
+
+# AI and ML dependencies
+openai==1.3.7
+pinecone-client==2.2.4
+sentence-transformers==2.2.2
+
+# File processing
+PyMuPDF==1.23.8
+pandas==2.1.4
+python-docx==1.1.0
+
+# Utilities
+python-dotenv==1.0.0
+aiofiles==23.2.1
+httpx==0.25.2
+numpy==1.25.2
+scikit-learn==1.3.2
+
+# Development and testing
+pytest==7.4.3
+pytest-asyncio==0.21.1
+black==23.11.0
+flake8==6.1.0

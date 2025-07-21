@@ -420,3 +420,4 @@ ConnectionResetError: [WinError 10054] An existing connection was forcibly close
 2025-07-18 00:06:03,762 - __main__ - DEBUG - Chain ended for event: response
 2025-07-18 00:06:03,764 - __main__ - DEBUG - Chain ended for event: LangGraph
 2025-07-18 00:06:03,764 - __main__ - INFO - Streaming completed for session: f27db63e-a62a-49f7-bf6b-d072ecdcd3aa
+2025-07-21 01:52:39,870 - VasaviRAG - ERROR - Missing required environment variables: OPENAI_API_KEY or PINECONE_API_KEY

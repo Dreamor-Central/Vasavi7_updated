@@ -32,6 +32,67 @@ const Home = () => {
   ]);
   const [currentMessage, setCurrentMessage] = useState("");
   const [checkpointId, setCheckpointId] = useState<string | null>(null);
+  const [isUploading, setIsUploading] = useState(false);
+
+  // Generate session ID on first use
+  const getSessionId = () => {
+    if (!checkpointId) {
+      const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+      setCheckpointId(sessionId);
+      return sessionId;
+    }
+    return checkpointId;
+  };
+
+  const handleFileUpload = async (file: File) => {
+    setIsUploading(true);
+    
+    try {
+      const formData = new FormData();
+      formData.append('file', file);
+      
+      const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+      const endpoint = file.name.endsWith('.csv') ? '/upload/csv' : '/upload/pdf';
+      
+      const response = await fetch(`${API_BASE}${endpoint}`, {
+        method: 'POST',
+        body: formData,
+      });
+      
+      if (!response.ok) {
+        throw new Error(`Upload failed: ${response.statusText}`);
+      }
+      
+      const result = await response.json();
+      
+      // Add upload success message to chat
+      const newMessageId = messages.length > 0 ? Math.max(...messages.map(msg => msg.id)) + 1 : 1;
+      setMessages(prev => [
+        ...prev,
+        {
+          id: newMessageId,
+          content: `Great! I've added ${result.row_count} products from "${result.file_name}" to my database. What would you like to know about them?`,
+          isUser: false,
+          type: 'message'
+        }
+      ]);
+      
+    } catch (error) {
+      // Add error message to chat
+      const newMessageId = messages.length > 0 ? Math.max(...messages.map(msg => msg.id)) + 1 : 1;
+      setMessages(prev => [
+        ...prev,
+        {
+          id: newMessageId,
+          content: `Sorry, I couldn't process that file. Please make sure it's a valid CSV or PDF file and try again.`,
+          isUser: false,
+          type: 'message'
+        }
+      ]);
+    } finally {
+      setIsUploading(false);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -68,11 +129,10 @@ const Home = () => {
           }
         ]);
 
-        // Use confirmed EC2 endpoint
-        let url = `http://localhost:8001/chat/stream?message=${encodeURIComponent(userInput)}`;
-        if (checkpointId) {
-          url += `&checkpoint_id=${encodeURIComponent(checkpointId)}`;
-        }
+        // Use the correct API endpoint
+        const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+        const sessionId = getSessionId();
+        const url = `${API_BASE}/chat/stream?message=${encodeURIComponent(userInput)}&checkpoint_id=${encodeURIComponent(sessionId)}`;
 
         const response = await fetch(url, {
           method: 'POST',
@@ -237,7 +297,13 @@ const Home = () => {
       <div className="w-full max-w-4xl bg-gray-900 flex flex-col rounded-xl shadow-2xl border border-gray-700 overflow-hidden h-[90vh]">
         <Header />
         <MessageArea messages={messages} />
-        <InputBar currentMessage={currentMessage} setCurrentMessage={setCurrentMessage} onSubmit={handleSubmit} />
+        <InputBar 
+          currentMessage={currentMessage} 
+          setCurrentMessage={setCurrentMessage} 
+          onSubmit={handleSubmit}
+          onFileUpload={handleFileUpload}
+          isUploading={isUploading}
+        />
       </div>
     </div>
   );
